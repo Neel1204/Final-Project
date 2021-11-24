@@ -1,0 +1,18 @@
+<h2> customer List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Customer Id</th>
+            <th> Name </th>
+            <th> ID Proof</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor = "let customerlist of customerlists" >
+            <td> {{ customerlist.cust_id }} </td>
+            <td> {{ customerlist.name }} </td>
+            <td> {{ customerlist.id_proof }} </td>
+        </tr>
+    </tbody>
+</table>

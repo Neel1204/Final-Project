@@ -1,0 +1,28 @@
+<h2> hotel List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> City Id</th>
+            <th> Start Date </th>
+            <th> End Date</th>
+            <th> Hotel Id</th>
+            <th> Customer Id </th>
+            <th> Room No.</th>
+            <th> Customer Id </th>
+            <th> Room No.</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let hotellist of hotellists" >
+            <td> {{ hotellist.city_id }} </td>
+            <td> {{ hotellist.hotel_name }} </td>
+            <td> {{ hotellist.id }} </td>
+            <td> {{ hotellist.price }} </td>
+            <td> {{ hotellist.address }} </td>
+            <td> {{ hotellist.photos }} </td>
+            <td> {{ hotellist.Review }} </td>
+            <td> {{ hotellist.Rating }} </td>
+
+        </tr>
+    </tbody>
+</table>

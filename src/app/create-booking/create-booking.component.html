@@ -1,0 +1,41 @@
+ <div class="col-md-6 offset-md-3">
+    <h3> Create Booking </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Hotel Id</label>
+            <input type="number" class ="form-control" id = "hotel_id"
+                [(ngModel)] = "bookings.hotel_id" name = "hotel_id">
+        </div>
+    
+        <div class="form-group">
+            <label> Start Date</label>
+            <input type="date" class ="form-control" id = "start_date"
+                [(ngModel)] = "bookings.start_date" name = "start_date">
+        </div>
+    
+        <div class="form-group">
+            <label> End Date</label>
+            <input type="date" class ="form-control" id = "end_date"
+                [(ngModel)] = "bookings.end_date" name = "end_date">
+        </div>
+    
+        <div class="form-group">
+            <label> Booking Id</label>
+            <input type="number" class ="form-control" id = "booking_id"
+                [(ngModel)] = "bookings.booking_id" name = "booking_id">
+        </div>  
+              <div class="form-group">
+            <label> Customer Id</label>
+            <input type="number" class ="form-control" id = "customer_id"
+                [(ngModel)] = "bookings.customer_id" name = "customer_id">
+        </div>   
+             <div class="form-group">
+            <label>Room No.</label>
+            <input type="number" class ="form-control" id = "Room_no"
+                [(ngModel)] = "bookings.Room_no" name = "Room_no">
+        </div>
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

@@ -1,0 +1,51 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Hotel </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> City Id</label>
+            <input type="number" class ="form-control" id = "city_id"
+                [(ngModel)] = "hotels.city_id" name = "city_id">
+        </div>
+    
+        <div class="form-group">
+            <label> Hotel Name</label>
+            <input type="string" class ="form-control" id = "hotel_name"
+                [(ngModel)] = "hotels.hotel_name" name = "hotel_name">
+        </div>
+    
+        <div class="form-group">
+            <label> Id</label>
+            <input type="number" class ="form-control" id = "id"
+                [(ngModel)] = "hotels.id" name = "id">
+        </div>
+    
+        <div class="form-group">
+            <label> Price</label>
+            <input type="number" class ="form-control" id = "price"
+                [(ngModel)] = "hotels.price" name = "price">
+        </div>  
+              <div class="form-group">
+            <label> Address</label>
+            <input type="string" class ="form-control" id = "address"
+                [(ngModel)] = "hotels.address" name = "address">
+        </div>   
+             <div class="form-group">
+            <label>Photos</label>
+            <input type="string" class ="form-control" id = "photos"
+                [(ngModel)] = "hotels.photos" name = "photos">
+        </div>
+            <div class="form-group">
+            <label>Review</label>
+            <input type="string" class ="form-control" id = "Review"
+                [(ngModel)] = "hotels.Review" name = "Review">
+        </div>
+            <div class="form-group">
+            <label>Rating</label>
+            <input type="string" class ="form-control" id = "Rating"
+                [(ngModel)] = "hotels.Rating" name = "Rating">
+        </div>
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
