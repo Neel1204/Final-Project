@@ -10,7 +10,7 @@ export class BookingService {
 
  
   private baseURL = "http://localhost:4449/getBooking";
-
+  private deleteURL = "http://localhost:4449/deleteBooking";
   constructor(private httpClient: HttpClient) {
    }
 
@@ -33,5 +33,7 @@ export class BookingService {
     return this.httpClient.put(`${putURL}`, booking);
   }
   
-
+  deleteBooking(id: number): Observable<Object>{
+    return this.httpClient.delete(`${this.deleteURL}/${id}`);
+  }
 }

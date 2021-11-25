@@ -28,4 +28,12 @@ export class BookingListComponent implements OnInit {
   updateBooking(id: number){
     this.router.navigate(['update-booking', id]);
   }
+
+  deleteBooking(id: number){
+    this.bookingService.deleteBooking(id).subscribe( data => {
+      console.log(data);
+      this.getBookings();
+    })
+  }
+
 }

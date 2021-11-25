@@ -17,9 +17,10 @@
             <td> {{ booking.end_date }} </td>
             <td> {{ booking.customer_id }} </td>
             <td> {{ booking.Room_no }} </td>
-             <!-- <td>
-                <button (click) = "updateBooking(booking.id)" class = "btn btn-info"> Update </button>
-            </td>  -->
+            <td>
+                <button (click) = "updateBooking(booking.booking_id)" class = "btn btn-info"> Update </button>
+                <button (click) = "deleteBooking(booking.booking_id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>  
 
         </tr>
     </tbody>

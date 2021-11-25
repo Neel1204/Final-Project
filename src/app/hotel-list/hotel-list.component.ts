@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Hotel } from '../hotel'; 
 import { HotelService } from '../hotel.service';
 
@@ -8,11 +9,11 @@ import { HotelService } from '../hotel.service';
   styleUrls: ['./hotel-list.component.css']
 })
 export class HotelListComponent implements OnInit {
-  [x: string]: any;
 
   hotellists: Hotel[] = [];
   
-  constructor(private hotellistService: HotelService) { }
+  constructor(private hotellistService: HotelService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getHotels();
@@ -21,6 +22,17 @@ export class HotelListComponent implements OnInit {
     this.hotellistService.getHotelsList().subscribe(data => {
       this.hotellists = data;
     });
+  }
+
+  updateHotel(id: number){
+    this.router.navigate(['update-city', id]);
+  }
+
+  deleteHotel(id: number){
+    this.hotellistService.deleteHotel(id).subscribe( data => {
+      console.log(data);
+      this.getHotels();
+    })
   }
 
 }

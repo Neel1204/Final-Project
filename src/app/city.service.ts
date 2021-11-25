@@ -10,7 +10,7 @@ export class CityService {
     throw new Error('Method not implemented.');
   }
   private baseURL = "http://localhost:4449/getCity";
-
+  private deleteURL = "http://localhost:4449/deleteCity";
   constructor(private httpClient: HttpClient) { }
 
   getCity(): Observable<City[]>{
@@ -29,6 +29,10 @@ export class CityService {
   updateCity(id: number, city: City): Observable<Object>{
     let putURL = "http://localhost:4449/updateCity?name="+city.name+"&id="+city.id;
     return this.httpClient.put(`${putURL}`, city);
+  }
+
+  deleteCity(id: number): Observable<Object>{
+    return this.httpClient.delete(`${this.deleteURL}/${id}`);
   }
 
 }

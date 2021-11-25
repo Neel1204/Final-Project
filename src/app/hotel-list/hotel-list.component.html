@@ -22,6 +22,10 @@
             <td> {{ hotellist.photos }} </td>
             <td> {{ hotellist.Review }} </td>
             <td> {{ hotellist.Rating }} </td>
+            <td>
+                <button (click) = "updateHotel(hotellist.id)" class = "btn btn-info"> Update </button>
+                <button (click) = "deleteHotel(hotellist.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td> 
 
         </tr>
     </tbody>
