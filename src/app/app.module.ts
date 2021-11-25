@@ -14,6 +14,9 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CityListComponent } from './city-list/city-list.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UpdateCityComponent } from './update-city/update-city.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { UpdateHotelComponent } from './update-hotel/update-hotel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,10 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     CityListComponent,
     CreateCityComponent,
     CreateCustomerComponent,
-    CreatehotelComponent
+    CreatehotelComponent,
+    UpdateCityComponent,
+    UpdateCustomerComponent,
+    UpdateHotelComponent
   ],
   imports: [
     BrowserModule,

@@ -22,4 +22,13 @@ export class CityService {
     return this.httpClient.post(`${setURL}`, city);
   }
 
+  getCityById(id: number): Observable<City>{
+    return this.httpClient.get<City>(`${this.baseURL}/${id}`);
+  }
+
+  updateCity(id: number, city: City): Observable<Object>{
+    let putURL = "http://localhost:4449/updateCity?name="+city.name+"&id="+city.id;
+    return this.httpClient.put(`${putURL}`, city);
+  }
+
 }

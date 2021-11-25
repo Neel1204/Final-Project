@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Booking } from '../booking';
 import { BookingService } from '../booking.service';
 
@@ -13,7 +13,8 @@ export class UpdateBookingComponent implements OnInit {
   id!: number;
   booking: Booking = new Booking();
   constructor(private bookingService: BookingService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -24,7 +25,13 @@ export class UpdateBookingComponent implements OnInit {
   }
 
   onSubmit(){
-    this.updateBooking();
+    this.bookingService.updateBooking(this.id, this.booking).subscribe( data =>{
+      this.goToBookingList();
   }
-
+  , error => console.log(error));
+}
+  
+  goToBookingList(){
+    this.router.navigate(['/bookings']);
+  }
 }

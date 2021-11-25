@@ -19,4 +19,13 @@ export class CustomerService {
     return this.httpClient.post(`${setURL}`, customer);
   }
 
+  getCustomerById(id: number): Observable<Customer>{
+    return this.httpClient.get<Customer>(`${this.baseURL}/${id}`);
+  }
+
+  updateCustomer(id: number, customer: Customer): Observable<Object>{
+    let putURL = "http://localhost:4449/updateCustomer?cust_id="+customer.cust_id+"&name="+customer.name+"&id_proof="+customer.id_proof;
+    return this.httpClient.put(`${putURL}`, customer);
+  }
+
 }

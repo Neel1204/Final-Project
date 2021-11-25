@@ -1,1 +1,21 @@
-<p>update-city works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3> Update City </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> name </label>
+            <input type="name" class ="form-control" id = "name"
+                [(ngModel)] = "city.name" name = "name">
+        </div>
+    
+        <div class="form-group">
+            <label> Id </label>
+            <input type="number" class ="form-control" id = "id"
+                [(ngModel)] = "city.id" name = "id">
+        </div>
+    
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
