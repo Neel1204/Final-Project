@@ -4,35 +4,35 @@
         <mat-card-title>Register</mat-card-title>
       </mat-card-header>
   
-      <form class="form-group">
+      <form class="form-group" (ngSubmit) = "onSubmit()">
   
         <mat-card-content>
           <mat-form-field class="example-full-width">
             <input matInput placeholder="Username" 
-            [(ngModel)] = "register.Username" name = "Username">
+            [(ngModel)] = "registers.Username" name = "Username">
           </mat-form-field>
   
           <mat-form-field class="example-full-width">
             <input matInput placeholder="Email"
-            [(ngModel)] = "register.email" name = "email">
+            [(ngModel)] = "registers.email" name = "email">
           </mat-form-field>
   
           <mat-form-field class="example-full-width">
             <input matInput placeholder="Password"
-            [(ngModel)] = "register.Password" name = "Password">
+            [(ngModel)] = "registers.pwd" name = "Password">
           </mat-form-field>
   
           <mat-form-field class="example-full-width">
             <mat-label>Choose a role...</mat-label>
             <mat-select>
-              <mat-option [value]="roles" *ngFor="let roles of Roles" [(ngModel)] = "register.Role" name = "Role">{{roles}}
+              <mat-option [value]="roles" *ngFor="let roles of Roles" [(ngModel)] = "registers.Role" name = "Role">{{roles}}
               </mat-option>
             </mat-select>
           </mat-form-field>
   
         </mat-card-content>
   
-        <button mat-stroked-button color="accent" class="btn-block">Register</button>
+        <button mat-stroked-button color="accent" class="btn-block" >Register</button>
   
       </form>
     </mat-card>

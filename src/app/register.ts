@@ -1,6 +1,6 @@
 export class Register {
     Username?: String;
-    Password?: String;
+    pwd?: String;
     email?: String;
     Role?: String;
 }

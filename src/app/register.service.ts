@@ -6,11 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RegisterService {
+  createRegister(registers: Register) : Observable<Object>{  
+    let setURL = "http://localhost:4449/setRegister?Username="+registers.Username+"&pwd="+registers.pwd+"&email="+registers.email+"&role="+registers.Role;
+        return this.httpClient.post(`${setURL}`, registers);
+  }
 
   constructor(private httpClient: HttpClient) { }
-}
-
-createRegister(register: Register): Observable<Object>{  
-  let setURL = "http://localhost:4449/setRegister?Username="+register.Username+"&Password="+register.Password+"&email="+register.email+"&role="+register.role;
-      return this.httpClient.post(`${setURL}`, register);
 }
