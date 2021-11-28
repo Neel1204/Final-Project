@@ -12,6 +12,8 @@ import { UpdateBookingComponent } from './update-booking/update-booking.componen
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { UpdateHotelComponent } from './update-hotel/update-hotel.component';
 import { UpdateCityComponent } from './update-city/update-city.component';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {path: 'bookings', component: BookingListComponent},
@@ -26,7 +28,10 @@ const routes: Routes = [
   {path: 'update-booking/:id', component: UpdateBookingComponent},
   {path: 'update-customer/:id', component: UpdateCustomerComponent},
   {path: 'update-hotel/:id', component: UpdateHotelComponent},
-  {path: 'update-city/:id', component: UpdateCityComponent}
+  {path: 'update-city/:id', component: UpdateCityComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  { path: 'login', component: LogInComponent },
+  { path: 'register', component: RegisterComponent }
 
 ];
 

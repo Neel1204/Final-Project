@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,13 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UpdateCityComponent } from './update-city/update-city.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { UpdateHotelComponent } from './update-hotel/update-hotel.component';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { RegisterComponent } from './components/register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material'; 
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,15 +39,24 @@ import { UpdateHotelComponent } from './update-hotel/update-hotel.component';
     CreatehotelComponent,
     UpdateCityComponent,
     UpdateCustomerComponent,
-    UpdateHotelComponent
+    UpdateHotelComponent,
+    HomeComponent,
+    LogInComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

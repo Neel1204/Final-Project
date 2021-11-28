@@ -11,10 +11,10 @@
         <tr *ngFor = "let citylist of citylists" >
             <td> {{ citylist.name}} </td>
             <td> {{ citylist.id }} </td>
-            <td>
-                <button (click) = "updateCity(citylist.id)" class = "btn btn-info"> Update </button>
-                <button (click) = "deleteCity(citylist.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-            </td>  
+         <td>
+                <button class = "btn btn-info"> Update </button>
+                <button class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>   
         </tr>
     </tbody>
 </table>
